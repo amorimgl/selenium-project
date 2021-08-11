@@ -20,6 +20,7 @@ public class basePage {
     public void openChromeBrowser(String browserUrl) {
 
         WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.whitelistedIps", "10.1.0.121");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(browserUrl);
